@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "proto/polygon";
+
+package polygon;
+
+// The greeting service definition.
+service Aggregate {
+  // Sends a greeting
+  rpc SayHello (AggRequest) returns (AggReply) {}
+}
+
+// The request message containing the user's name.
+message AggRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message AggReply {
+  string message = 1;
+}

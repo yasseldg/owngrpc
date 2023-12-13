@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  grpc_client:
+    image: grpc_client:0.0.1
+    container_name: grpc_client
+    environment:
+      TZ: UTC
+      LogLevel: INFO
+    extra_hosts:
+      - "io.polygon.moon:192.168.10.10"
+    volumes:
+      - certs/x509:/root/certs/x509:ro
+    networks:
+      - go_dev
+
+networks:
+  go_dev:
+    external: true

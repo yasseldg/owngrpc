@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  grpc_server:
+    image: grpc_server:0.0.1
+    container_name: grpc_server
+    environment:
+      TZ: UTC
+      LogLevel: INFO
+    volumes:
+      - certs/x509:/root/certs/x509:ro
+    networks:
+      - go_dev
+
+networks:
+  go_dev:
+    external: true
