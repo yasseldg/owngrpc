@@ -27,6 +27,11 @@ var (
 )
 
 func main() {
+	// Intenta obtener la dirección del entorno, sino utiliza el valor predeterminado
+	if envAddr, exists := os.LookupEnv("ServerAddress"); exists {
+		addr = &envAddr
+	}
+
 	flag.Parse()
 
 	for {

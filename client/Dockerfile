@@ -4,7 +4,7 @@
 #  The first stage container, for building the application
 # ---------------------------------------------------------------------
 
-FROM golang:1.21.1 AS builder
+FROM golang:1.21.4 AS builder
 
 WORKDIR /go/src/
 

@@ -9,8 +9,9 @@ services:
       LogLevel: INFO
     extra_hosts:
       - "io.polygon.moon:192.168.10.10"
+    ServerAddress: "io.polygon.moon:50051"
     volumes:
-      - certs/x509:/root/certs/x509:ro
+      - ../certs/x509:/go/src/certs/x509:ro
     networks:
       - go_dev
 
