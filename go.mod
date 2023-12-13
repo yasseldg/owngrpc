@@ -5,7 +5,6 @@ go 1.21.4
 replace github.com/yasseldg/go-utils => ../utils
 
 require (
-	github.com/yasseldg/go-utils v0.0.0-00010101000000-000000000000
 	github.com/yasseldg/simplego v0.6.0
 	golang.org/x/oauth2 v0.13.0
 	google.golang.org/grpc v1.60.0
